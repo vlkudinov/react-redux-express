@@ -1,0 +1,14 @@
+.sorting {
+  display: flex;
+  flex-direction: column;
+}
+
+.sorting__select {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 0.6px solid rgba(#9f9f9f, 0.6);
+  color: #2196f3;
+  text-transform: uppercase;
+  cursor: pointer;
+}

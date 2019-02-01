@@ -1,0 +1,130 @@
+.tickets {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  transition: all 2s;
+}
+.tickets__item {
+  display: flex;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  min-width: 520px;
+}
+
+.tickets__left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 0.6px solid rgba(#cdcdcd, 0.8);
+  justify-content: center;
+}
+
+.tickets__right {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  flex-basis: auto;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.tickets__time,
+.tickets__path,
+.tickets__date {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+.tickets-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #ff6d00;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+
+  &__text {
+    flex-basis: 100%;
+  }
+  &__price {
+    white-space: nowrap;
+  }
+  &__icon {
+    margin-left: 2px;
+  }
+}
+
+.tickets__route {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+}
+
+.route__plane {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 150px;
+  height: 1px;
+  background-color: #cdcdcd;
+  &:after {
+    content: ' ';
+    position: absolute;
+    background: url('./plane.svg') no-repeat center center;
+    background-size: cover;
+    top: -7.5px;
+    left: calc(100% + 2px);
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.route {
+  &__origin,
+  &__path,
+  &__destination {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+  }
+  &__origin {
+    align-items: flex-start;
+  }
+  &__time {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__city {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__date {
+    font-size: 10px;
+  }
+  &__stops {
+    text-transform: uppercase;
+    color: #6d6d6d;
+    margin-bottom: 5px;
+  }
+  &__destination {
+    align-items: flex-end;
+  }
+  &__path {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -16px;
+  }
+}

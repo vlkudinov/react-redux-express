@@ -1,0 +1,21 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  flex-grow: 1;
+  max-width: 160px;
+  &__item:not(:first-child) {
+    margin-top: 20px;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #545454;
+    margin: 0 0 10px 0;
+  }
+}
